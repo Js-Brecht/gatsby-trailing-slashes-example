@@ -50,7 +50,7 @@ app.get('*', async (req, res) => {
                 break;
             }
             case FS_TYPE.none: {
-                res.status(404).end();
+                res.status(404).sendFile(getPath('404', 'index.html'));
             }
         }
     } catch (err) {
